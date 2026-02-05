@@ -1,0 +1,5 @@
+cmd.exe /c echo y | pscp.exe -p -pw monitor monitor@10.251.xx.xx:/home/ftp/logs/* C:\FS-Script\Jeevanproman\jvnpreport\
+
+
+###
+plink.exe -batch -ssh monitor@10.251.xx.xx -pw monitor "df -Th" >> D:\Task scheduler for SMG\output.txt
