@@ -1,0 +1,25 @@
+Steps to recover
+How to recover from this situation and to bring back the power shell, .net feature and UI in 2012, 2012U1
+
+As stated earlier, this will leave the server without a graphical shell for user interaction. Only the command prompt will be available post reboot.
+
+If you get into this situation, run the below commands in the Server Core’s command prompt window to help you recover.z
+
+Run the below commands one by one
+DISM.exe /Online /enable-feature /featurename:NetFx4 /all
+DISM.exe /online /enable-feature /featurename:MicrosoftWindowsPowerShell /all
+ Reboot the server
+shutdown /r /t 0
+
+ To restore the GUI need to run the PowerShell commands. Below procedure how to open PowerShell prompt in server core’s command prompt
+a) To begin, press CTRL-ALT-Del and select Task Manager from the list
+b) Once Task Manager Opens select File and Run new task
+c) You should now see the Create new task menu, type PowerShell.exe and select OK
+d) PowerShell prompt should now be open
+
+ Run the below commands on the PowerShell prompt
+Install-WindowsFeature Server-Gui-Shell
+Install-WindowsFeature Server-Gui-Mgmt-Infra
+Once the GUI Shell is installed, you will need to restart the server with the following command:
+Restart-Computer
+shutdown /r /t 0
