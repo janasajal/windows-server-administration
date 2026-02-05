@@ -1,0 +1,2 @@
+To check port opening status in Windows
+netstat -an | findstr 480*
