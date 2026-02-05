@@ -1,0 +1,9 @@
+Download and Install Fibre Channel Infomation (fcinfo) tool from Microsoft Download Center. Once done, run "fcinfo" command from PowerShell prompt.
+c:\>fcinfo
+
+For Windows Server 2012, 2012 R2 and 2016
+
+from PowerShell prompt
+Run "Get-InitiatorPort"
+
+C:\> Get-InitiatorPort
