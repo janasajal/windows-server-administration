@@ -1,0 +1,11 @@
+w32tm /unregister
+net stop w32time
+w32tm /register
+net start w32time
+w32tm /config /update /manualpeerlist:10.251.33.80 /syncfromflags:manual /reliable:yes
+net stop w32time
+net start w32time
+then check
+w32tm /query /source
+w32tm /query /configuration
+w32tm /resync /rediscover
