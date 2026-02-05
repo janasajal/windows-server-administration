@@ -1,0 +1,26 @@
+Robocopy (Robust File Copy) is a built-in Windows command-line tool for fast, reliable file and folder copying, especially great for:
+
+Large data transfers
+
+Server-to-server migrations
+
+Network shares
+
+Incremental backups
+
+Resilient copies (retries, resume, permissions)
+
+
+
+ROBOCOPY Y:\Sajal D:\Ttest /E /z
+
+ /E :: copy subdirectories, including Empty ones
+ /Z :: copy files in restartable mode.
+
+For old version Windows 
+C:\Windows\System32\Robocopy.exe Y:\Sajal D:\Ttest /E /z
+
+For available option
+# robocopy /?
+
+ROBOCOPY "Y:\Sajal" "D:\Ttest" /E /z /MIR
