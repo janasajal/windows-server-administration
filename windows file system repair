@@ -1,0 +1,8 @@
+Run the CMD in administrative mode
+If you want chkdsk to attempt to repair logical file system errors during the scan, add the /f switch. Note that if the drive has files that are in use (and it probably will), you’ll be asked to schedule a scan for the next restart.
+
+chkdsk /f c:
+
+If you want chkdsk to scan for bad sectors as well, you’ll use the /r switch
+
+chkdsk c: /f /r
