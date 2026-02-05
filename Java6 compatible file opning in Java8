@@ -1,0 +1,23 @@
+open java security file 
+
+C:\Program Files\Java\jre1.8.0_144\lib\security
+
+disabled the below line by adding #
+#jdk.jar.disabledAlgorithms=MD2, MD5, RSA keySize < 1024
+
+****How to resolve "Application blocked by Java security" error****
+
+Add application URL to Java exception list :
+1. Go to the Control Panel from the Start menu.
+2. Double-click on the Java icon to get the Java control panel dialog box.
+3. Navigate to the Security Tab.
+4. Click the 'Edit Site List' button.
+5. Click the Add button in the Exception Site List window.
+6. Click in the empty field under Location field to enter the URL. 
+7. Click the OK button.
+
+#### IDRAC opening issue ####
+#   jdk.tls.disabledAlgorithms=MD5, SSLv3, DSA, RSA keySize < 2048
+Need to remove 
+jdk.tls.disabledAlgorithms=SSLv3, RC4, MD5withRSA, DH keySize < 768
+## ref: https://windowsreport.com/cant-launch-dell-virtual-console/
