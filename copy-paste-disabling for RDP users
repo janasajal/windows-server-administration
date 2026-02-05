@@ -1,0 +1,4 @@
+COPY PASTE Disabling for RDP users
+ run>>gpedit.msc
+Administrattive template>>Windows component>>Terminal service>>Terminal Server 
+then enable don't allow clipboard redirection & don't allow drive redirection.
